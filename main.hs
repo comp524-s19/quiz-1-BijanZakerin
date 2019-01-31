@@ -1,6 +1,6 @@
-finalGrade :: (Num a) => [a] -> [a] -> a
-finalGrade (x:xs) (y:ys) = 
-    let grade = sum (x*y)
+finalGrade :: [Int] -> [Int] -> Int
+finalGrade xs ys = 
+    let grade = sum (zipWith (*) xs ys)
         weight = sum ys
     in grade `div` weight
 
